@@ -161,7 +161,7 @@ class Cron {
     if (_dayOfMonthField == '*') return true;
 
     if (_dayOfMonthField.contains("/")) {
-      final s = _dayOfWeekField.split("/");
+      final s = _dayOfMonthField.split("/");
       var skips = int.parse(s[1]);
       final bounds = s[0].split("-").map((v) => int.parse(v)).toList();
       for (var i = bounds[0]; i <= bounds[1]; i += skips) {
